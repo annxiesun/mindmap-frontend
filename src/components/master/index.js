@@ -11,7 +11,6 @@ import {
 } from "react-router-dom";
 
 export default function MasterView() {
-
   return (
       <Router>
         <Switch>
