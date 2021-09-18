@@ -1,11 +1,11 @@
 import React from 'react';
+import styles from './style.module.css';
 
-export default function PasteText({ toResults }) {
+export default function PasteText() {
   return (
-    <div>
-      Paste your notes
-      <textarea />
-      <button onClick={toResults}></button>
+    <div className={styles.container}>
+      <h1 className={styles.label}>Paste your notes</h1>
+      <textarea className={styles.textArea}/>
     </div>
   )
 }

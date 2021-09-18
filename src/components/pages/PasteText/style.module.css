@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.label {
+  width: 80%;
+  max-width: 1000px;
+  text-align: left;
+}
+
+.textArea {
+  -webkit-box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.05); 
+  box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.05);
+  border: none;
+  border-radius: 8px;
+  resize: none;
+  outline: none;
+  width: 80%;
+  max-width: 1000px;
+  font-size: 14px;
+  height: 80%;
+  max-height: 650px;
+  margin-bottom: 36px;
+}
