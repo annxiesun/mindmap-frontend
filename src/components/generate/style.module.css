@@ -1,0 +1,31 @@
+.button {
+  border: 2px solid #62d4e6;
+  font-family: 'Quicksand', sans-serif;
+  background: none;
+  color: #62d4e6;
+  font-size: 24px;
+  padding: 8px 36px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  border-radius: 3px;
+  height: fit-content;
+  position: relative;
+}
+
+
+.hoverEffect {
+  height: 100%;
+  width: 0%;
+  transition: 0.3s ease-in;
+  position: absolute;
+  top:0;
+  left: 0;
+  opacity: 0.1;
+}
+.button:hover .hoverEffect {
+  width: 100%;
+  background-color: #62d4e6;
+  transition: 0.3s ease-in;
+  z-index: 0;
+}

@@ -71,13 +71,13 @@
 }
 
 .popup {
-  background-color: #b5ebd6;
+  background-color: #b5ebd6bb;
   width: 80%;
   max-width: 800px;
   padding: 4px 16px;
   box-sizing: border-box;
-  color: #00b38f;
-  fill: #00b38f;
+  color: #00b38fd0;
+  fill: #00b38fd0;
   font-weight: 600;
   border-radius: 4px;
   position: relative;
@@ -90,7 +90,7 @@
 .popupTop {
   border-radius: 4px 4px 0 0;
   height: 5px;
-  background-color: #00b38f;
+  background-color: #03daaf8c;
   width: 100%;
   position: absolute;
   top: 0;
