@@ -19,7 +19,6 @@ h1, h2, h3 {
   font-weight: 400;
 }
 .featureButton {
-  background: 01AFDB;
   background: -moz-linear-gradient(140deg, #01AFDB 0%, rgba(221,238,207,1) 100%);
   background: -webkit-linear-gradient(140deg, #01AFDB 0%, rgba(221,238,207,1) 100%);
   background: linear-gradient(140deg, #01AFDB 0%, rgba(221,238,207,1) 100%);
