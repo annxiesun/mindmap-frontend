@@ -11,7 +11,8 @@ export default function Landing() {
       <div className={styles.content}>
         <div style={{ padding: '42px', boxSize: 'border-box' }}>
           <Fade bottom>
-            <h1>Turn your notes into a mind map</h1>
+            <h1 style={{ marginBottom: '0px' }}>Turn your notes into a mind map</h1>
+            <p style={{ marginTop: '4px' }}>Organize and visualize your thoughts with one simple click!</p>
           </Fade>
           <Fade bottom delay={500}>
             <Link to='/choose'>
