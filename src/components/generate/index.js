@@ -8,9 +8,9 @@ import Spinner from '../Spinner';
 export default function GenerateButton({ imageFile }) {
   const [data, setData] = useState(null);
   const [load, setLoad] = useState(false);
+  const apiUrl = "http://c86e-34-86-196-136.ngrok.io/find";
   const [clicked, setClicked] = useState(false);
 
-  const apiUrl = "https://6d5b-34-86-196-136.ngrok.io/find";
   const handleClick = async () => {
     setClicked(true);
     if (imageFile) {
