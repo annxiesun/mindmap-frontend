@@ -1,10 +1,10 @@
-import React, { useRef, useState } from 'react';
-import styles from './style.module.css';
-import { FileDrop } from 'react-file-drop';
-import Upload from '../../icon/Upload';
-import GenerateButton from '../../generate';
-import { Fade } from 'react-reveal';
-import Cube from '../../icon/Cube';
+import React, { useRef, useState } from "react";
+import styles from "./style.module.css";
+import { FileDrop } from "react-file-drop";
+import Upload from "../../icon/Upload";
+import GenerateButton from "../../generate";
+import { Fade } from "react-reveal";
+import Cube from "../../icon/Cube";
 
 export default function UploadFile({ toResults }) {
   const [selectFile, setSelectFile] = useState(null);
@@ -19,18 +19,20 @@ export default function UploadFile({ toResults }) {
     }
 
     setSelectFile(file);
-    if (file.type === 'image/jpeg' || file.type === 'image/png' || file.type === 'image/jpg') {
-
-    } else if (file.type === 'text/plain') {
+    if (
+      file.type === "image/jpeg" ||
+      file.type === "image/png" ||
+      file.type === "image/jpg"
+    ) {
+    } else if (file.type === "text/plain") {
       const text = await file.text();
       console.log(text);
-
     }
-  }
+  };
 
   const onTargetClick = () => {
-    fileInputRef.current.click()
-  }
+    fileInputRef.current.click();
+  };
 
   return (
     <>
@@ -40,7 +42,9 @@ export default function UploadFile({ toResults }) {
             <div className={styles.popupTop} />
             <div className={styles.popupTextbox}>
               <Cube />
-              <p className={styles.popupText}>Supported file types include .png, .jpg, .jpeg, and .txt </p>
+              <p className={styles.popupText}>
+                Supported file types include .png, .jpg, .jpeg, and .txt{" "}
+              </p>
             </div>
           </div>
           <input
@@ -53,7 +57,21 @@ export default function UploadFile({ toResults }) {
             <button onClick={onTargetClick} className={styles.uploadBtn}>
               Upload File
             </button>
-            <p>{selectFile !== null ? <>{selectFile.name}<span className={styles.x} onClick={() => setSelectFile(null)}>✕</span></> : 'Choose file...'}</p>
+            <p>
+              {selectFile !== null ? (
+                <>
+                  {selectFile.name}
+                  <span
+                    className={styles.x}
+                    onClick={() => setSelectFile(null)}
+                  >
+                    ✕
+                  </span>
+                </>
+              ) : (
+                "Choose file..."
+              )}
+            </p>
           </div>
           <FileDrop
             onDrop={(files, event) => setSelectFile(files[0])}
@@ -67,9 +85,9 @@ export default function UploadFile({ toResults }) {
               Click or Drag and drop file
             </>
           </FileDrop>
-          <GenerateButton />
+          <GenerateButton imageFile={selectFile} />
         </div>
       </Fade>
     </>
-  )
+  );
 }
