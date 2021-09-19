@@ -18,7 +18,7 @@ export default function ChoosePath() {
             </div>
           </Fade>
         </Link>
-        <Link to='/paste'>
+        <Link to='/choose'>
           <Fade bottom distance="200px" duration={220}>
             <div className={styles.choiceCard}>
               <img className={styles.graphic} src='/resources/paste.svg' />
