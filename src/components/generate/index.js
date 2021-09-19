@@ -3,12 +3,16 @@ import styles from "./style.module.css";
 import axios from "axios";
 import { Link, Redirect } from "react-router-dom";
 import Results from "../pages/Results";
+import Spinner from '../Spinner';
 
 export default function GenerateButton({ imageFile }) {
   const [data, setData] = useState(null);
   const [load, setLoad] = useState(false);
+  const [clicked, setClicked] = useState(false);
+
   const apiUrl = "https://6d5b-34-86-196-136.ngrok.io/find";
   const handleClick = async () => {
+    setClicked(true);
     if (imageFile) {
       const formData = new FormData();
       formData.append("image", imageFile);
@@ -39,6 +43,7 @@ export default function GenerateButton({ imageFile }) {
           console.log(d);
 
           setData(d.result);
+          setClicked(false);
           console.log(data);
         }}
         className={true ? styles.button : "featureButton"}
@@ -46,6 +51,7 @@ export default function GenerateButton({ imageFile }) {
         <span style={{ zIndex: 9 }}>Generate Mind Map</span>
         <div className={styles.hoverEffect} />
       </button>
+      {clicked && <Spinner />}
       {load ? <Results mark={data} /> : null}
     </>
   );

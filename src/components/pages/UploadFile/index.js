@@ -43,7 +43,7 @@ export default function UploadFile({ toResults }) {
             <div className={styles.popupTextbox}>
               <Cube />
               <p className={styles.popupText}>
-                Supported file types include .png, .jpg, .jpeg, and .txt{" "}
+                Supported file types include .png, .jpg, and .jpeg{" "}
               </p>
             </div>
           </div>
