@@ -32,6 +32,9 @@ export default function MasterView() {
           <Route path="/choose">
             <ChoosePath />
           </Route>
+          <Route path="/results">
+            <Results />
+          </Route>
           <Route path="/">
             <Landing />
           </Route>
