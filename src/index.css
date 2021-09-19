@@ -7,12 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, p, a, textarea, input {
+body, h1, h2, h3, p, a, textarea, input, button {
   font-family: 'Quicksand', sans-serif;
-  color: #1A1B28;
   text-decoration: none;
 }
 
+a {
+  color: #1A1B28;
+}
 h1, h2, h3 {
   font-weight: 400;
 }

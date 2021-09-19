@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './style.module.css';
+import GenerateButton from '../../generate';
+import { Fade } from 'react-reveal';
 
 export default function PasteText() {
+  const [text, setText] = useState('');
+
   return (
-    <div className={styles.container}>
-      <h1 className={styles.label}>Paste your notes</h1>
-      <textarea className={styles.textArea}/>
-    </div>
+    <Fade bottom distance="50px">
+      <div className={styles.container}>
+        <textarea placeholder="Paste notes here..." value={text} className={styles.textArea} onChange={(e) => setText(e.target.value)} />
+        <GenerateButton />
+      </div>
+    </Fade>
   )
 }
