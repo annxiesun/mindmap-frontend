@@ -8,11 +8,20 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Link
 } from "react-router-dom";
+import styles from './style.module.css';
 
 export default function MasterView() {
   return (
+    <>
       <Router>
+        <Link to="/">
+          <div className={styles.logoContainer}>
+            <img className={styles.logoIcon} src="/resources/logo.svg" />
+            MapIT
+          </div>
+        </Link>
         <Switch>
           <Route path="/upload">
             <UploadFile />
@@ -28,5 +37,6 @@ export default function MasterView() {
           </Route>
         </Switch>
       </Router>
+    </>
   )
 }
