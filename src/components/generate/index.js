@@ -7,7 +7,7 @@ import Results from "../pages/Results";
 export default function GenerateButton({ imageFile }) {
   const [data, setData] = useState(null);
   const [load, setLoad] = useState(false);
-  const apiUrl = "https://6d5b-34-86-196-136.ngrok.io/find";
+  const apiUrl = "http://c86e-34-86-196-136.ngrok.io/find";
   const handleClick = async () => {
     if (imageFile) {
       const formData = new FormData();
